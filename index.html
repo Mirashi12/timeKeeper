@@ -10,31 +10,30 @@
         <script src="script.js" async defer></script>
     </head>
     <body>
-        <div class="nav-container">
+        <nav class="nav-container">
             <h1 class="logo">TimeKeep</h1>
-            <nav>
-                <h2>About</h2>
-                <h2>Contact</h2>
-            </nav>
-        </div>
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
         <div class="header">
             <h3>Tracker Title</h3>
         </div>
         <div class="tracker-container">
-            <div class="tracker-table">
-                <table>
-                    <tr>
-                        <th>Project</th>
-                        <th>Time spent</th>
-                        <th>Timer</th>
-                    </tr>
-                    <tr>
-                        <th>Dummy project</th>
-                        <th>Dummy time</th>
-                        <th>Dummy timer</th>
-                    </tr>
-                </table>
-            </div>
+            <table class="tracker-table">
+                <tr class="columns">
+                    <th>Project</th>
+                    <th>Time spent</th>
+                    <th>Timer</th>
+                </tr>
+                <tr class="row">
+                    <th>Dummy project</th>
+                    <th>Dummy time</th>
+                    <th>Dummy timer</th>
+                </tr>
+                
+            </table>
         </div>
     </body>
 </html>
