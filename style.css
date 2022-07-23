@@ -70,6 +70,12 @@ tr th {
     background-color: rgba(0, 128, 255, 0.1);
 }
 
+.project-name {
+    width: 150px;
+    font-weight: 100;
+    background-color: rgba(0, 128, 255, 0.0);
+}
+
 
 .toggle {
     display: flex;

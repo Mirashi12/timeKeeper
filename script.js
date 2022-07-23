@@ -20,3 +20,18 @@ function addRow(event) {
 
 const addButton = document.querySelector('.add-tracking-btn');
 addButton.addEventListener('click', addRow);
+
+// takes the input text and replaces the input element with its contenty as a tr
+
+function saveName() {
+    let input = document.getElementById("project-name").value;
+    const form = document.getElementById("form-name");
+
+    const parent = document.querySelector('tbody');
+
+    const th = document.createElement('th');
+    th.textContent = input;
+    th.classList.add('project-name');
+
+    form.replaceWith(th);
+}
