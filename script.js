@@ -5,10 +5,27 @@ function addRow(event) {
     tr.classList.add('table-row');
 
     for (let i = 0; i <= 2; i++) {
-        const th = document.createElement('th');
-        th.textContent = 'Dummy data';
-        tr.appendChild(th);
+        if (i == 0) {
+            const th = document.createElement('th');
+
+            const inputForm = document.createElement('form');
+            inputForm.setAttribute("id", "form-name");
+            inputForm.setAttribute("onsubmit", "saveName();return false");
+
+            const inputElement = document.createElement('input');
+            inputElement.setAttribute("id", "project-name");
+            inputElement.setAttribute("type", "text");
+            inputForm.appendChild(inputElement);
+            th.appendChild(inputForm);
+            tr.appendChild(th);
+
+        } else if (i > 0 && i <= 2) {
+            const th = document.createElement('th');
+            th.textContent = 'Dummy data';
+            tr.appendChild(th);
     }
+
+}
 
     const toggleButton = document.createElement('button');
     toggleButton.textContent = 'Start / Pause';
@@ -16,7 +33,8 @@ function addRow(event) {
     tr.appendChild(toggleButton);
 
     parent.appendChild(tr);
-}
+}    
+
 
 const addButton = document.querySelector('.add-tracking-btn');
 addButton.addEventListener('click', addRow);
@@ -27,7 +45,7 @@ function saveName() {
     let input = document.getElementById("project-name").value;
     const form = document.getElementById("form-name");
 
-    const parent = document.querySelector('tbody');
+//    const parent = document.querySelector('tbody');
 
     const th = document.createElement('th');
     th.textContent = input;
